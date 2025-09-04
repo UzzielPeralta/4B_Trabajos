@@ -8,4 +8,15 @@ public class Cuenta {
     public void depositar(double cantidad) {
         saldo += cantidad;
     }
-    
+    public void retirar(double cantidad) {
+        if (cantidad <= saldo) {
+            saldo -= cantidad;
+        } else {
+            System.out.println("Fondos insuficientes.");
+        }
+    }
+
+    public double consultarSaldo() {
+        return saldo;
+    }
+}
