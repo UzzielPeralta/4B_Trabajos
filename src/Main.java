@@ -18,7 +18,7 @@ public class Main {
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = scanner.nextInt();
-            
+
             switch (opcion) {
                 case 1:
                     System.out.print("¿Cuánto depositaras?: ");
@@ -30,3 +30,18 @@ public class Main {
                     double montoRetiro = scanner.nextDouble();
                     retiro.hacerRetiro(miCuenta, montoRetiro);
                     break;
+                case 3:
+                    System.out.println("Tu saldo actual es de: $" + miCuenta.consultarSaldo());
+                    break;
+                case 4:
+                    System.out.println("Sistema cerrado. Vuelva pronto");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Selecciona una valida.");
+            }
+
+        } while (opcion != 4);
+
+        scanner.close();
+    }
+}
